@@ -1,0 +1,13 @@
+## Intellij ###
+out/
+*.ipr
+.idea
+
+### Gradle ###
+build/
+.gradle/
+local.properties
+
+### Other ###
+.cache
+.env
