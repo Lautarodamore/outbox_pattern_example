@@ -12,7 +12,7 @@ class DatabaseOutboxMessages(private val database: Database) {
     }
 
     fun update(outboxMessage: OutboxMessage) {
-        database.statement("UPDATE outbox_messages set occuredOn = '${outboxMessage.occurredOn.formatAsISO8601()}', type = '${outboxMessage.type}', data = '${outboxMessage.data}', processedDate = '${outboxMessage.processedDate?.formatAsISO8601()}' WHERE id = '${outboxMessage.id}';")
+        database.statement("UPDATE outbox_messages set occurredon = '${outboxMessage.occurredOn.formatAsISO8601()}', type = '${outboxMessage.type}', data = '${outboxMessage.data}', processeddate = '${outboxMessage.processedDate?.formatAsISO8601()}' WHERE id = '${outboxMessage.id}';")
     }
 
     private fun LocalDateTime.formatAsISO8601(): String {
